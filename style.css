@@ -1,0 +1,12 @@
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.table th {
+  padding: .75rem .27rem .75rem .27rem !important;
+}
+
+.form-title {
+  padding-right: 1rem;
+}
