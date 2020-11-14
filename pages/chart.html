@@ -1,25 +1,35 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
+
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <!--Let browser know website is optimized for mobile-->
+      <link rel="stylesheet" href="/sheets/chart.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <title>Search for Stock Charts</title>
     </head>
 
     <body>
-      <select id="pairs" onChange="loadingChart();"  style="display: block;" >
-        <option value="AAPL">AAPL</option>
-        <option value="AMZN">AMZN</option>
-      </select>
-      <div id="tvchart" class="tradingview-widget-container">
-
+      <div class="header-container">
+      <header>
+        <h1>Stock Charts</h1>
+        <h3 class="lead">
+          Search for stock charts in a click of a button!
+        </h3>
+      </header>
+    </div>
+    <div class="form-container">
+      <div class="form-in-container">
+        <h3>Enter Symbol Here</h3>
+        <form class="form">
+          <input id="symbol-text" class="input-text" type="text" />
+          <input id="symbol-button" type="button" value="Submit" />
+        </form>
       </div>
-      <!--JavaScript at end of body for optimized loading-->
+    </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="/components/chart.js"></script>
+      <script src="main.js"></script>
     </body>
   </html>
