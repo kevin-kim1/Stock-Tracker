@@ -41,3 +41,8 @@
 .form .input-text {
   height: 30px !important;
 }
+
+.tradingview-widget-container {
+  margin-top: 15px;
+  height: 350px;
+}
