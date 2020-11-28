@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-  <html>
-    <head>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/sheets/chart.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/tv.js"
+    ></script>
+    <title>Search for Stock Charts</title>
+  </head>
 
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" href="/sheets/chart.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-      <title>Search for Stock Charts</title>
-    </head>
-
-    <body>
-      <div class="header-container">
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/index.html">Stock Price</a></li>
+          <li><a href="/pages/chart.html">Stock Chart</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
       <header>
         <h1>Stock Charts</h1>
-        <h3 class="lead">
-          Search for stock charts in a click of a button!
-        </h3>
+        <h3 class="lead">Search for stock charts in a click of a button!</h3>
       </header>
     </div>
     <div class="form-container">
@@ -29,8 +43,7 @@
       </div>
     </div>
     <div class="tradingview-widget-container" id="tvchart"></div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="/components/chart.js"></script>
-      <script src="main.js"></script>
-    </body>
-  </html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/components/chart.js"></script>
+  </body>
+</html>
