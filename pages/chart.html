@@ -21,12 +21,20 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="left hide-on-med-and-down">
           <li><a href="/index.html">Stock Price</a></li>
-          <li><a href="/pages/chart.html">Stock Chart</a></li>
+          <li><a href="chart.html">Stock Chart</a></li>
         </ul>
       </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/index.html">Stock Price</a></li>
+      <li><a href="chart.html">Stock Chart</a></li>
+    </ul>
     <div class="header-container">
       <header>
         <h1>Stock Charts</h1>
@@ -43,7 +51,13 @@
       </div>
     </div>
     <div class="tradingview-widget-container" id="tvchart"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/components/chart.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
   </body>
 </html>
