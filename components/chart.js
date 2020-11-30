@@ -1,31 +1,69 @@
+// loadingChart();
 function loadingChart() {
-  let symbol = document.getElementById("chart-symbol-text");
+  const inputText = document.getElementById("chart-symbol-text");
   document.getElementById("chart-symbol-button").addEventListener("click", () => {
-    let symbolArr = symbol.value.split(', ');
-    for (let i = 0; i < symbolArr.length; i++) {
-      let chartDiv = document.createElement("div");
-      chartDiv.classList.add("tradingview-widget-container");
-      let uniqueID = Math.floor(Math.random() * 100).toString().split('');
-      uniqueID.shift('#');
-      uniqueID = uniqueID.join('');
-      let chart = new TradingView.widget({
-        autosize: true,
-        symbol: "NASDAQ:" + symbolArr[i],
-        interval: "D",
-        timezone: "Etc/UTC",
-        theme: "light",
-        style: "1",
-        locale: "in",
-        toolbar_bg: "#f1f3f6",
-        enable_publishing: false,
-        allow_symbol_change: true,
-        container_id: "tvchart",
-      });
-      chartDiv.appendChild(chart);
-      console.log(chartDiv);
-      document.getElementById('tvchart').appendChild(chartDiv);
-    }
-  })
+    let symbol = inputText.value;
+      let chart = new TradingView.widget(
+                {
+                "container_id": "tvchart",
+                "width": 414.4,
+                "height": 400,
+                "symbol": symbol,
+                "interval": "D",
+                "timezone": "exchange",
+                "theme": "light",
+                "style": "1",
+                "toolbar_bg": "#f1f3f6",
+                "withdateranges": true,
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "save_image": false,
+                "studies": [
+                  "MACD@tv-basicstudies",
+                  "RSI@tv-basicstudies",
+                  "MASimple@tv-basicstudies"
+                ],
+                "show_popup_button": true,
+                "popup_width": "1000",
+                "popup_height": "650",
+                "locale": "in"
+              }
+      );
+    })
 }
-
 loadingChart();
+
+
+
+
+// <!-- TradingView Widget BEGIN -->
+//   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+//   new TradingView.widget(
+//   {
+//   "container_id": "technical-analysis",
+//   "width": 998,
+//   "height": 610,
+//   "symbol": "AAPL",
+//   "interval": "D",
+//   "timezone": "exchange",
+//   "theme": "light",
+//   "style": "1",
+//   "toolbar_bg": "#f1f3f6",
+//   "withdateranges": true,
+//   "hide_side_toolbar": false,
+//   "allow_symbol_change": true,
+//   "save_image": false,
+//   "studies": [
+//     "ROC@tv-basicstudies",
+//     "StochasticRSI@tv-basicstudies",
+//     "MASimple@tv-basicstudies"
+//   ],
+//   "show_popup_button": true,
+//   "popup_width": "1000",
+//   "popup_height": "650",
+//   "locale": "in"
+// }
+//   );
+//   </script>
+// </div>
+// <!-- TradingView Widget END -->
