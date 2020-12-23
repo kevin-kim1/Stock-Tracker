@@ -17,10 +17,10 @@ function loadNews() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // document.getElementById('headline').textContent = data[0].headline;
+        const pstTimeStamp = new Date(data[0].datetime * 1000);
+        document.getElementById('headline').textContent = data[0].headline;
+        document.getElementById('date').textContent = pstTimeStamp;
       });
-    console.log(newsData);
-    console.log(symbol);
   })
 }
 loadNews();
