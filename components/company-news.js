@@ -20,6 +20,8 @@ function loadNews() {
         const pstTimeStamp = new Date(data[0].datetime * 1000);
         document.getElementById('headline').textContent = data[0].headline;
         document.getElementById('date').textContent = pstTimeStamp;
+        document.getElementById('image').setAttribute("src", data[0].image);
+        document.getElementById('summary').textContent = data[0].summary;
       });
   })
 }
