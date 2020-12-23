@@ -22,6 +22,9 @@ function loadNews() {
         document.getElementById('date').textContent = pstTimeStamp;
         document.getElementById('image').setAttribute("src", data[0].image);
         document.getElementById('summary').textContent = data[0].summary;
+        document.getElementById('source').textContent = "By " + data[0].source;
+        document.getElementById('link').setAttribute("href", data[0].url);
+        document.getElementById('link').textContent = "Click for full article";
       });
   })
 }
