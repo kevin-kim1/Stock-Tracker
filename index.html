@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
-    />
+    /> -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=ProximaNova">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -39,26 +41,23 @@
       <li><a href="/pages/chart.html">Stock Chart</a></li>
       <li><a href="/pages/company-news.html">Stock News</a></li>
     </ul>
-    <div class="h-100 pb-3 pt-3 mx-auto d-flex flex-column text-center">
+     <div class="header-container">
       <header>
-        <h1>Stock Price Text Delivery</h1>
-        <h3 class="lead">
-          Get the regular market open price and regular market day high in a
-          click of a button!
-        </h3>
+        <h1>Stock Price</h1>
+        <h3 class="lead">Search for multiple stocks with a comma and a space to get the prices via text message!</h3>
       </header>
     </div>
-    <div class="h-100 pb-4 mx-auto d-flex flex-column text-center">
-      <div class="mx-auto d-flex flex-row text-center">
-        <h3 class="form-title lead">Enter Symbol Here</h3>
-        <form>
-          <input id="symbol-text" type="text" />
+    <div class="form-container">
+      <div class="form-in-container">
+        <h3>Enter Symbol Here</h3>
+        <form class="form">
+          <input id="symbol-text" class="input-text" type="text" />
           <input id="symbol-button" type="button" value="Submit" />
         </form>
       </div>
     </div>
-    <div class="container col-8">
-      <table id="stock-table" class="table">
+    <div class="container">
+      <table id="stock-table" class="responsive-table table">
         <thead>
           <tr>
             <th>Stock Name</th>
