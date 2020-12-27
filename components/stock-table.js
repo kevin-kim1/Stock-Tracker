@@ -34,7 +34,7 @@ class StockTable {
     $(document).ready(function () {
       $(idStr).click(function () {
         var SID = "ACf53d9774ae285b301ea86ee1353866ae";
-        var Key = "a7bba04a2b74232f4b7e20f8f22a284d";
+        var Key = "c9ade92580503cecfb2cedb93329aa61";
         $.ajax({
           type: 'POST',
           username: SID,
