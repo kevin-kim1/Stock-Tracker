@@ -50,6 +50,7 @@
 .news-title {
   font-size: 35px;
   margin-top: 0px;
+  margin-right: 14px;
   margin-bottom: 10px;
   margin-left: 35px;
 }
@@ -73,7 +74,7 @@
 
 .img-container {
   margin: 0 auto;
-  width: 90%;
+  width: 91%;
 }
 
 .news-link {
