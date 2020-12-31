@@ -1,11 +1,24 @@
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.041), rgba(255,255,255,.5)), url("/assets/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+.sidenav-entry {
+  font-size: 25px !important;
+}
 .container {
   margin-top: 45px !important;
-  height: 400px;
+  background-color: lightgrey;
 }
 
 .table th, td {
   font-size: 20px;
 }
+
 
 .header-container {
   display: flex;
@@ -13,8 +26,9 @@
   text-align: center;
   height: 100%;
   padding-bottom: 3px;
-  margin: auto;
+  margin:  0 auto;
   font-size: 10px;
+  background-color: aliceblue;
 }
 
 .header-container h1{
@@ -23,11 +37,14 @@
 
 .header-container h3{
   font-size: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .form-container {
   height: 100%;
   padding-bottom: 4px;
+  background-color: aliceblue;
 }
 
 .form-container h3 {

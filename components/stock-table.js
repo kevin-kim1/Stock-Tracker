@@ -3,7 +3,6 @@ class StockTable {
     this.tableElement = tableElement;
   }
   updateStock1(stock) {
-    console.log(length);
     var tableOfStocks = document.querySelector("tbody");
     var shortName = stock[1].price.shortName + " (" + stock[1].symbol + ")";
     var rmo = "$" + stock[0].o;
