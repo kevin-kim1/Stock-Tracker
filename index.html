@@ -15,8 +15,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=ProximaNova">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -24,8 +26,8 @@
     <title>Stock Price To Text</title>
   </head>
   <body>
-     <nav>
-      <div class="nav-wrapper">
+    <nav>
+      <div class="nav-wrapper blue-grey">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
@@ -37,19 +39,22 @@
       </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="index.html">Stock Price</a></li>
-      <li><a href="/pages/chart.html">Stock Chart</a></li>
-      <li><a href="/pages/company-news.html">Stock News</a></li>
+      <li><a href="index.html" class="sidenav-entry">Stock Price</a></li>
+      <li><a href="/pages/chart.html" class="sidenav-entry">Stock Chart</a></li>
+      <li><a href="/pages/company-news.html" class="sidenav-entry">Stock News</a></li>
     </ul>
-     <div class="header-container">
+    <div class="header-container">
       <header>
         <h1>Stock Price</h1>
-        <h3 class="lead">Search for multiple stocks with a comma and a space to get the prices via text message!</h3>
+        <h3 class="lead">
+          Search for multiple stocks with a comma and a space to get the prices
+          via text message!
+        </h3>
       </header>
     </div>
     <div class="form-container">
       <div class="form-in-container">
-        <h3>Enter Symbol Here</h3>
+        <h3>Search Symbol</h3>
         <form class="form">
           <input id="symbol-text" class="input-text" type="text" />
           <input id="symbol-button" type="button" value="Submit" />
