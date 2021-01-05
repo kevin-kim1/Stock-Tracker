@@ -7,9 +7,11 @@ body {
   background-color: #464646;
   font-family: 'Noto Sans SC', sans-serif;
 }
+
 .sidenav-entry {
   font-size: 25px !important;
 }
+
 .container {
   margin-top: 45px !important;
   background-color: lightgrey;

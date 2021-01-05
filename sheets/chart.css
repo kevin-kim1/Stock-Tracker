@@ -1,3 +1,17 @@
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.041), rgba(255,255,255,.5)), url("/assets/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.sidenav-entry {
+  font-size: 25px !important;
+}
+
 .header-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +20,7 @@
   padding-bottom: 3px;
   margin: auto;
   font-size: 10px;
+  background-color: aliceblue;
 }
 
 .header-container h1{
@@ -19,6 +34,7 @@
 .form-container {
   height: 100%;
   padding-bottom: 4px;
+  background-color: aliceblue;
 }
 
 .form-container h3 {
@@ -43,6 +59,5 @@
 }
 
 .tradingview-widget-container {
-  margin-top: 15px;
-  height: 350px;
+  height: 600px;
 }
