@@ -3,11 +3,19 @@ function loadingChart() {
   const inputText = document.getElementById("chart-symbol-text");
   document.getElementById("chart-symbol-button").addEventListener("click", () => {
     let symbol = inputText.value;
+    const screenWidth = screen.height;
+    const nav = document.getElementById('nav')
+    const header = document.getElementById('header');
+    const form = document.getElementById('form');
+    let navWidth = nav.offsetHeight;
+    let headerWidth = header.offsetHeight;
+    let formWidth = form.offsetHeight;
+    const responsiveWidth = screenWidth - (navWidth + headerWidth + formWidth);
+    console.log(responsiveWidth);
       let chart = new TradingView.widget(
                 {
                 "container_id": "tvchart",
-                "width": 414.4,
-                "height": 400,
+                "autosize": true,
                 "symbol": symbol,
                 "interval": "D",
                 "timezone": "exchange",
