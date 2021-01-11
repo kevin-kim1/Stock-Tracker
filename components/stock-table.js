@@ -47,7 +47,7 @@ class StockTable {
             xhr.setRequestHeader("Authorization", "Basic " + btoa(SID + ':' + Key));
           },
           success: function () {
-            console.log("Request successful");
+            console.log("Post request successful");
           },
           error: function () {
             alert("Unable to find stock by this symbol");
