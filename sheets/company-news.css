@@ -8,6 +8,10 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
+.sidenav-entry {
+  font-size: 25px !important;
+}
+
 .header-container {
   display: flex;
   flex-direction: column;
