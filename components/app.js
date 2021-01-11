@@ -36,9 +36,6 @@ class App {
               return Promise.all(responses.map((res) => res.json()));
             })
             .then((data) => {
-              if (!data.ok) {
-                throw new Error(data.error);
-              }
               this.handleGetStockSuccess(data);
             })
             .catch((err) => console.log(err));
