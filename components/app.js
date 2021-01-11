@@ -13,7 +13,6 @@ class App {
   }
 
   getStock() {
-    // Make Modal for instructions
     let symbolText = document.getElementById("symbol-text");
     document.getElementById("symbol-button").addEventListener("click", () => {
       let symbol = symbolText.value.split(', ');
@@ -37,8 +36,12 @@ class App {
               return Promise.all(responses.map((res) => res.json()));
             })
             .then((data) => {
+              if (!data.ok) {
+                throw new Error(data.error);
+              }
               this.handleGetStockSuccess(data);
-            });
+            })
+            .catch((err) => console.log(err));
       }
       document.getElementById("symbol-button").setAttribute("disabled", "");
       setTimeout(function () {
