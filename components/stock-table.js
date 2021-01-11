@@ -20,7 +20,6 @@ class StockTable {
     var idSelect = uniqueID.split('');
     idSelect.unshift('#');
     var idStr = idSelect.join('');
-    console.log(idStr);
     button.setAttribute("id", uniqueID);
     button.textContent = "Send SMS";
     buttonData.appendChild(button);
@@ -47,11 +46,11 @@ class StockTable {
           beforeSend: function (xhr) {
             xhr.setRequestHeader("Authorization", "Basic " + btoa(SID + ':' + Key));
           },
-          success: function (data) {
-            console.log(data);
+          success: function () {
+            console.log("Request successful");
           },
-          error: function (data) {
-            console.log(data);
+          error: function () {
+            alert("Unable to find stock by this symbol");
           }
         });
       });

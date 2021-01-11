@@ -13,7 +13,6 @@ class App {
   }
 
   getStock() {
-    // Make Modal for instructions
     let symbolText = document.getElementById("symbol-text");
     document.getElementById("symbol-button").addEventListener("click", () => {
       let symbol = symbolText.value.split(', ');
